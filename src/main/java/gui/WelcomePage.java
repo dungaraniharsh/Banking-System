@@ -36,7 +36,7 @@ public class WelcomePage extends JFrame {
         welcomePage.setLayout(null);
 
 //       Initializing components
-        header = Utils.setHeader("Welcome to UoMBanking");
+        header = Utils.setHeader("Welcome to Banking");
         signIn = new JLabel("Sign In");
         infoPanel = new JPanel();
         createAccountButton = new JButton("Create an account");

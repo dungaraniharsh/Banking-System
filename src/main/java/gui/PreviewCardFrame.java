@@ -16,22 +16,22 @@ import model.Card;
 
 public class PreviewCardFrame extends JFrame {
 
-    private JLabel header; //επικεφαλίδα
+    private JLabel header; 
     private JFrame prFrame;
-    private JPanel PrePanel; //panel που θα φιλοξενήσει τα front και back
-    private JPanel frontCardPanel; //μπροστά μέρος της κάρτας
-    private JPanel backCardPanel; //πίσω μέρος της κάρτας
-    private JTextField typeText; //τύπος
-    private JLabel carNum; //φιλοξενία αριθμού κάρτας
-    private JLabel nameLabel; //φιλοξενία ονόματος κάρτας
-    private JLabel expCard;//φιλοξενία ημ.λήξης κάρτας
-    private JLabel cardCvv; //φιλοξενία cvv κάρτας
-    private JLabel logo; //φιλοξενία εικόνας κάρτας(MasterCard,VISA)
-    private JLabel frontLogo; //φιλοξενία εικόνας κάρτας(UOM)
-    private JLabel backLogo; //φιλοξενία εικόνας κάρτας (UOM)
+    private JPanel PrePanel;
+    private JPanel frontCardPanel;
+    private JPanel backCardPanel; 
+    private JTextField typeText; 
+    private JLabel carNum; 
+    private JLabel nameLabel; 
+    private JLabel expCard;
+    private JLabel cardCvv; 
+    private JLabel logo; 
+    private JLabel frontLogo; 
+    private JLabel backLogo; 
     private JLabel font;
-    private JPanel chipPanel; //φιλοξενία chip κάρτας
-    private StringBuilder cardNumberBuilder; // για επεξεργασία και προσθήκη κένων στον αριθμό της κάρτας
+    private JPanel chipPanel;
+    private StringBuilder cardNumberBuilder;
 
     //A label for valid thru card
     private JLabel expLabel;
@@ -44,7 +44,6 @@ public class PreviewCardFrame extends JFrame {
     public PreviewCardFrame(Account account, String type, long cardNum, String cardExp, String cardName, int cardCVV, Color cardColor) {
         setLayout(null);
 
-        //Arxikopoihsh metavlhtwn
         prFrame = new Template();
         PrePanel = new JPanel();
         frontCardPanel = new JPanel();
@@ -94,7 +93,7 @@ public class PreviewCardFrame extends JFrame {
 
     public void buildCard(String type, long cardNum, String cardExp, String cardName, long cardCVV, Color cardColor){
         expLabel = new JLabel("VALID THRU");
-        backLabel = new JLabel("UoMBanking");
+        backLabel = new JLabel("Banking");
 
         frontCardPanel.setBackground(cardColor);
         backCardPanel.setBackground(cardColor);
@@ -109,7 +108,6 @@ public class PreviewCardFrame extends JFrame {
         PrePanel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 
 
-        //τοποθέτηση των 2 panel στις κατάλληλες διαστάσεις
         frontCardPanel.setPreferredSize(new Dimension(400, 200));
         backCardPanel.setPreferredSize(new Dimension(400, 200));
         frontCardPanel.setBounds(200, 350, 1000, 150);
@@ -132,7 +130,7 @@ public class PreviewCardFrame extends JFrame {
         carNum.setBounds(50, 50, 500, 100);
         carNum.setFont(new Font("Courier", Font.PLAIN, 25));
 
-        //Adding UOM logo in card
+        //Adding logo in card
         frontCardPanel.add(frontLogo);
         frontLogo.setBounds(10, 5, 80, 40);
         frontLogo.setIcon(Utils.setLabelIcon("src/main/java/images/LOGO_3.png", frontLogo));

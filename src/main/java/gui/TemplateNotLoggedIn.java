@@ -18,7 +18,7 @@ public class TemplateNotLoggedIn extends JFrame{
 
 //      Initializing components
         logo = new JLabel("Logo");
-        name = new JLabel("UOMSystemX");
+        name = new JLabel("BankSystemX");
 
 //      Setting up JLabel logo
         logo.setBounds(0, 0, 150, 30);

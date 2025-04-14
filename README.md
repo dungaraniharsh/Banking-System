@@ -12,7 +12,7 @@ FOR DEVS: 1) Make sure to load this code in a maven project.
           
           
 
-By the software team of UOMSystemX:
+By the software team of SystemX:
           Sparagis
           Sfyrakis
           Spiridopoulou

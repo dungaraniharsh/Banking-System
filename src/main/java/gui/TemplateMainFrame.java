@@ -24,7 +24,7 @@ public class TemplateMainFrame extends JFrame {
 
 //      Initializing components
         logo = new JLabel("Logo");
-        name = new JLabel("UOMSystemX");
+        name = new JLabel("BankSystemX");
         accountIcon = new JLabel("Account");
         clientName = new JLabel();
 

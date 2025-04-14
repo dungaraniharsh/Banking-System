@@ -1,14 +1,16 @@
 package org.example;
 
-/**
- * By the software team of UOMSystemX
- *
- */
-import model.*;
-import org.hibernate.*;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
+
+import model.Deposit;
+import model.Payment;
+import model.Transfer;
+import model.Withdraw;
 
 public class AppAccount {
     public static void main(String[] args) {
