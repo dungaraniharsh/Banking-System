@@ -145,7 +145,6 @@ public class WelcomePage extends JFrame {
                         // Clear both the username and password fields
                         usernameField.setText("");
                         passwordField.setText("");
-                        // Request focus on the username field for user convenience
                         usernameField.requestFocus();
                     }
 

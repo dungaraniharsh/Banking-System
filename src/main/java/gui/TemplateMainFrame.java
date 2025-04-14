@@ -72,7 +72,7 @@ public class TemplateMainFrame extends JFrame {
         setMaximumSize(new Dimension(1200, 800));
         setSize(1200, 800);
         getContentPane().setBackground(Color.LIGHT_GRAY);
-        validate(); //validates the images
+        validate(); 
     }
 }
 

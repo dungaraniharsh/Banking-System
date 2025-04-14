@@ -62,7 +62,6 @@ public class User {
     }
 
 
-    //  toString method to fetch data from database
 
 
  /*   @Override

@@ -24,7 +24,6 @@ public class Template extends JFrame {
     private JButton logOut;
 
     public Template() {
-//      Setting layout manager to null for absolute positioning
         setLayout(null);
 
 //      Initializing components

@@ -156,7 +156,6 @@ public class PreviewCardFrame extends JFrame {
             logo.setIcon(Utils.setLabelIcon("src/main/java/images/visa.jpg", logo));
         }
 
-        //Adding expiration date of card
         frontCardPanel.add(expCard);
         expCard.setBounds(180, 150,100,50);
 

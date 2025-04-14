@@ -16,7 +16,6 @@ public class TemplateNotLoggedIn extends JFrame{
 //      Setting layout manager to null for absolute positioning
         setLayout(null);
 
-//      Initializing components
         logo = new JLabel("Logo");
         name = new JLabel("BankSystemX");
 

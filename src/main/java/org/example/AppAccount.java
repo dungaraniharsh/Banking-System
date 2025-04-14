@@ -22,8 +22,6 @@ public class AppAccount {
 
         Transaction tx = session.beginTransaction();
 
-//      Creating a new user class
-
 //        User user1 = new User();
        // Account acc1 = new Account(100.2,"","","Astakos");
         Withdraw withdraw = new Withdraw("", "22", 22, "22", "22");
