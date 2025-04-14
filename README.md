@@ -1,5 +1,5 @@
-# UomBanking
-This repository includes the code of a full stack java application for a group project in the course of "Software Engineering". The UomBanking application demonstrates an e-banking system, that gives the ability to do transactions, take loans, create cards and more. 
+# Banking
+This repository includes the code of a full stack java application for a group project in the course of "Software Engineering". The Banking application demonstrates an e-banking system, that gives the ability to do transactions, take loans, create cards and more. 
 
 FOR DEVS: 1) Make sure to load this code in a maven project.
           2) Check the versions in the pom.xml file, because they might be outdated.

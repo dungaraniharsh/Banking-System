@@ -1,16 +1,21 @@
 package gui;
 
-import model.Account;
-import model.Client;
-import org.example.AccountDB;
-import org.example.ClientDB;
-
-import javax.swing.*;
-import javax.swing.border.Border;
-import java.awt.*;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Arrays;
+
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
+import org.example.AccountDB;
+import org.example.ClientDB;
+
+import model.Account;
+import model.Client;
 
 public class CreateAccount extends JFrame {
     public JFrame createAccount;
@@ -28,7 +33,7 @@ public class CreateAccount extends JFrame {
         createAccount = new TemplateNotLoggedIn();
 
 //      Initializing components
-        header = Utils.setHeader("Create an UoMBanking account");
+        header = Utils.setHeader("Create an Banking account");
         subHeader = new JLabel("Start now with our free services");
         createAccountButton = new JButton("Create your account");
         loginLabel = new JLabel("Already have an account?");
