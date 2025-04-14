@@ -1,25 +1,54 @@
-# Banking
-This repository includes the code of a full stack java application for a group project in the course of "Software Engineering". The Banking application demonstrates an e-banking system, that gives the ability to do transactions, take loans, create cards and more. 
+# Java Banking Application
 
-FOR DEVS: 1) Make sure to load this code in a maven project.
-          2) Check the versions in the pom.xml file, because they might be outdated.
-          3) If you want to use your own database, go in the hibernate.cfg.xml and change the connection url.
-          4) You don't need to install any libraries, because the maven project does that for you.
-          5) If you change the version of Hibernate, you might need to change the SQLite dialect dependency.
-          6) Load this project in Intellij IDEA, because ECLIPSE has a problem with the packages.
-          7) For SDK use the openJDK 20.0.1
-          8) To run the application, run the App class in gui package
-          
-          
+This project is a **full-stack Java-based e-banking system** built by our team as part of the "Software Engineering" course. It allows users to manage transactions, apply for loans, generate cards, and more through an intuitive GUI. The system uses **JavaFX** for the interface, **Hibernate** for ORM, and **SQLite** for persistent data storage.
 
-By the software team of SystemX:
-          Sparagis
-          Sfyrakis
-          Spiridopoulou
-          Rizoulis
-          Tziasta
-          Rossopoulou
-          Sousloglou
-          Stigkas
-          Cenko
-          Samoli
+## Features
+
+- User registration and login
+- Deposit and withdrawal transactions
+- Loan applications and tracking
+- Card creation and management
+- User-friendly GUI using JavaFX
+- Data persistence using SQLite
+- Object-Relational Mapping (ORM) with Hibernate
+
+## Technologies Used
+
+- Java (JDK 20.0.1)
+- JavaFX (GUI)
+- Maven (Dependency Management)
+- Hibernate (ORM)
+- SQLite (Database)
+- IntelliJ IDEA (Recommended IDE)
+
+## Getting Started
+
+### Prerequisites
+
+- Java SDK (OpenJDK 20.0.1)
+- Maven
+- IntelliJ IDEA (Recommended)
+
+### Setup Instructions
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/banking-application.git
+   cd banking-application
+
+2. **Open the Project in IntelliJ IDEA**
+
+⚠️ Note: Eclipse may have issues with project packages.
+
+3. **Run the Application**
+
+- Navigate to the gui package.
+
+- Run the App.java file as the main class.
+
+**Configuration**
+- If using your own database, edit the connection URL in hibernate.cfg.xml.
+
+- Maven will automatically handle all required dependencies.
+
+- If changing the Hibernate version, ensure the correct SQLite dialect is used.
