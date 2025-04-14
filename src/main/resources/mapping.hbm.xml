@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="model">
+
+    <!-- Account Mapping   -->
+    <class name="Account" table="Account">
+
+        <id name="client" column="clientUsername" type="string">
+            <generator class="assigned"/>
+
+        </id>
+
+        <property name="balance" column="balance" type="double"/>
+        <property name="IBAN" column="IBAN" type="string"/>
+        <property name="ID" column="ID" type="string"/>
+        <property name="costPerTransaction" column="CostPerTransaction" type="string"/>
+
+    </class>
+
+    <!-- Client Mapping   -->
+    <class name="Client" table="Client">
+
+        <id name="username" column="Username" type="string">
+            <generator class="assigned"/>
+        </id>
+
+        <property name="firstName" column="FirstName" type="string"/>
+        <property name="lastName" column="LastName" type="string"/>
+        <property name="phoneNumber" column="PhoneNumber" type="string"/>
+        <property name="email" column="Email" type="string"/>
+        <property name="password" column="Password" type="string"/>
+
+    </class>
+
+    <!-- Loan Mapping-->
+    <class name="Loan" table="Loan">
+
+        <id name="id" column="ID" type="string">
+            <generator class="assigned"/>
+        </id>
+
+        <property name="accountID" column="AccountID" type="string"/>
+        <property name="loanAmount" column="LoanAmount" type="double"/>
+        <property name="date" column="DateOfApply" type="string"/>
+        <property name="description" column="Description" type="string"/>
+        <property name="dateExp" column="ExpirationDate" type="string"/>
+        <property name="doses" column="Doses" type="int"/>
+
+
+
+    </class>
+
+    <!-- Card Mapping-->
+    <class name="Card" table="Card">
+
+        <id name="accountID" column="AccountID" type="string">
+            <generator class="assigned"/>
+        </id>
+
+        <property name="cardName"  column="CardName" type="string"/>
+        <property name="cardNumber" column="CardNumber" type="long"/>
+        <property name="expirationDate" column="ExpirationDate" type="string"/>
+        <property name="cvv" column="CVV" type="int"/>
+        <property name="type" column="Type" type="string"/>
+        <property name="color" column="Color" type="string"/>
+
+    </class>
+
+    <!--Transactions Mapping-->
+    <class name="Transactions" table="Transactions" abstract="false">
+
+        <id name="ID" column="ID">
+            <generator class="assigned"/>
+        </id>
+
+        <discriminator column="TransactionType" type="string"/>
+
+        <property name="date" column="Date"/>
+        <property name="amount" column="Amount"/>
+        <property name="description" column="Description"/>
+        <property name="clientusername" column="ClientUsername"/>
+
+        <subclass name="Deposit" discriminator-value="Deposit">
+        </subclass>
+
+        <subclass name="Transfer" discriminator-value="Transfer">
+            <property name="IBAN" column="IBAN"/>
+        </subclass>
+
+        <subclass name="Payment" discriminator-value="Payment">
+            <property name="type" column="Type"/>
+        </subclass>
+
+        <subclass name="Withdraw" discriminator-value="Withdraw">
+        </subclass>
+    </class>
+
+</hibernate-mapping>
